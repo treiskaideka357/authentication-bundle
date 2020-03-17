@@ -1,0 +1,15 @@
+services:
+#    authentication.example:
+#        class: AuthenticationBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
+
+  #AuthenticationBundle\Security\TokenAuthenticator:
+  #          class: AuthenticationBundle\Security\TokenAuthenticator
+
+  authenticator:
+            class: retItalia\AuthenticationBundle\Security\GoogleAuthenticator
+            arguments: ["@oauth2.registry", "@doctrine.orm.entity_manager","@router", "%application_id%"]
+
+  userAuthorizedFunctions:
+            class: retItalia\AuthenticationBundle\Entity\FunzioniUtente
+            arguments: ["@security.token_storage","%application_id%", "@doctrine.orm.entity_manager","@security.authorization_checker"]

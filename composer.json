@@ -1,0 +1,24 @@
+{
+  "name": "retitalia/authentication-bundle",
+  "type": "symfony-bundle",
+  "description": "This bundle implements a sso google authentication via oauth2",
+  "keywords": ["sso", "oauth2", "google"],
+  "homepage": "https://github.com/RetItaliaSpA/AuthenticationBundle",
+  "license": "MIT",
+  "require": {
+    "php": ">=5.5.9",
+    "knpuniversity/oauth2-client-bundle": "^1.19",
+    "league/oauth2-google": "^2.2"
+  },
+  "authors": [
+    {
+      "name": "Bruno Piccirilli",
+      "email": "brunopicci@icloud.com"
+    }
+  ],
+  "autoload":{
+    "psr-4":{
+      "retItalia\\AuthenticationBundle\\": ""
+    }
+  }
+}
